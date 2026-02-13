@@ -1,55 +1,45 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <title>Curatori1 | Luxury Hair Studio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root { --oro: #b38e5d; --nero: #1a1a1a; --bianco: #fdfdfd; }
-        body { font-family: 'Playfair Display', serif; background-color: var(--bianco); color: var(--nero); margin: 0; }
-        nav { padding: 40px; text-align: center; border-bottom: 1px solid #eee; position: relative; }
-        nav a { text-decoration: none; color: var(--nero); margin: 0 20px; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; }
-        
-        /* Immagine Grande Storia */
-        .about-section { display: flex; padding: 80px 10%; gap: 50px; align-items: center; flex-wrap: wrap; }
-        .about-text { flex: 1; min-width: 300px; }
-        .about-image { 
-            flex: 1; min-width: 300px; height: 500px; 
-            background: url('capelli.jpeg') center/cover; /* Ho messo capelli.jpeg come esempio */
-            border: 1px solid #eee; 
-        }
+NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
 
-        /* Hero */
-        .hero { 
-            height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; 
-            background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('donne.jpeg') center/cover; 
-        }
-        
-        footer { padding: 40px; text-align: center; font-size: 0.7rem; color: #999; border-top: 1px solid #eee; }
-    </style>
-</head>
-<body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="servizi.html">Servizi</a>
-        <a href="#">L'Identità</a>
-    </nav>
+[[CURRENCIES]]
+code="SHAMPOO"
+issuer="GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK"
+display_precision=2
+image="https://curatori1.github.io/CUR/oil.jpeg"
 
-    <section class="hero">
-        <p style="text-transform: uppercase; letter-spacing: 5px; color: var(--oro);">Curatori1 Studio</p>
-        <h1 style="font-size: 5rem; margin: 0;">Once, Forever</h1>
-    </section>
+[[CURRENCIES]]
+code="PURIF"
+issuer="GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK"
+display_precision=2
+image="https://curatori1.github.io/CUR/purif.jpeg"
 
-    <section class="about-section">
-        <div class="about-text">
-            <h2>La Storia</h2>
-            <p>L'arte della bellezza è una tradizione tramandata a Curatori1.</p>
-        </div>
-        <div class="about-image"></div>
-    </section>
+[[CURRENCIES]]
+code="REBAL"
+issuer="GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK"
+display_precision=2
+image="https://curatori1.github.io/CUR/rebalan.jpeg"
 
-    <footer>
-        GD22GB...SQK | CURATORI1 © 2026
-    </footer>
-</body>
-</html>
+[[CURRENCIES]]
+code="SALI"
+issuer="GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK"
+display_precision=2
+image="https://curatori1.github.io/CUR/sali.jpeg"
+
+[[CURRENCIES]]
+code="HAIR"
+issuer="GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK"
+display_precision=2
+image="https://curatori1.github.io/CUR/hair.jpeg"
+
+[[CURRENCIES]]
+code="TREAT3D"
+issuer="GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK"
+display_precision=2
+image="https://curatori1.github.io/CUR/3d.jpeg"
+
+[[CURRENCIES]]
+code="OI"
+issuer="GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK"
+display_precision=2
+image="https://cura
+          
+
