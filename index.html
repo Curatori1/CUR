@@ -3,149 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CURATORI1 - Luxury Hair Blockchain</title>
+    <title>CURATORI1 | Atelier Blockchain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #c5a059;
-            --dark-bg: #050505;
-            --card-bg: #111111;
-            --text-color: #ffffff;
+        :root { --gold: #d4af37; --light-grey: #f9f9f9; }
+        body { background-color: #ffffff; color: #333; font-family: 'Montserrat', sans-serif; margin: 0; }
+        
+        header { 
+            padding: 80px 20px; text-align: center; background: var(--light-grey);
+            border-bottom: 1px solid #eee;
         }
+        h1 { font-family: 'Cinzel', serif; font-size: 2.5rem; letter-spacing: 10px; color: #000; margin: 0; }
+        .subtitle { font-weight: 200; letter-spacing: 5px; text-transform: uppercase; font-size: 0.8rem; margin-top: 10px; }
 
-        body {
-            background-color: var(--dark-bg);
-            color: var(--text-color);
-            font-family: 'Playfair Display', serif;
-            margin: 0;
-            overflow-x: hidden;
-        }
+        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; padding: 60px 8%; }
+        
+        .item { text-align: center; transition: 0.3s; }
+        .item:hover { opacity: 0.8; }
+        .item img { width: 100%; height: 400px; object-fit: cover; border: 1px solid #eee; }
+        
+        .item h3 { font-family: 'Cinzel', serif; font-size: 1.1rem; letter-spacing: 2px; margin: 20px 0 10px; }
+        .price { font-weight: 200; color: var(--gold); margin-bottom: 20px; }
 
-        /* Header con effetto parallasse e testo oro */
-        header {
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('capelli.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 2px solid var(--gold);
+        .btn-luxury { 
+            background: none; border: 1px solid #333; color: #333; padding: 12px 30px; 
+            text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; cursor: pointer; transition: 0.4s;
         }
+        .btn-luxury:hover { background: #000; color: #fff; border-color: #000; }
 
-        header h1 {
-            font-size: 4rem;
-            color: var(--gold);
-            letter-spacing: 8px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            letter-spacing: 3px;
-            color: #ccc;
-        }
-
-        /* Griglia Prodotti Elegante */
-        .container {
-            padding: 60px 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-        }
-
-        .product-card {
-            background: var(--card-bg);
-            border: 1px solid #222;
-            border-radius: 5px;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.5s ease;
-            position: relative;
-        }
-
-        .product-card:hover {
-            border-color: var(--gold);
-            box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
-            transform: translateY(-10px);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 3px;
-            filter: grayscale(30%);
-            transition: 0.5s;
-        }
-
-        .product-card:hover img {
-            filter: grayscale(0%);
-        }
-
-        .product-card h3 {
-            color: var(--gold);
-            margin: 20px 0 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        /* Pulsante ACQUISTA Stellar Style */
-        .buy-btn {
-            background: transparent;
-            color: var(--gold);
-            border: 1px solid var(--gold);
-            padding: 12px 25px;
-            cursor: pointer;
-            font-weight: bold;
-            letter-spacing: 2px;
-            transition: 0.4s;
-            width: 100%;
-        }
-
-        .buy-btn:hover {
-            background: var(--gold);
-            color: black;
-        }
-
-        footer {
-            padding: 40px;
-            text-align: center;
-            border-top: 1px solid #222;
-            font-size: 0.8rem;
-            color: #666;
-        }
+        footer { padding: 50px; text-align: center; font-size: 0.7rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>CURATORI1</h1>
-    <p>DIGITAL ASSET HAIR STORE</p>
+    <div class="subtitle">Atelier Stellar Blockchain</div>
 </header>
 
 <div class="container">
-    <div class="product-card"><img src="oil.jpeg"><h3>Shampoo Oil</h3><button class="buy-btn" onclick="buy('SHAMPOO')">ACQUISTA TOKEN</button></div>
-    <div class="product-card"><img src="purif.jpeg"><h3>Purifying Gel</h3><button class="buy-btn" onclick="buy('PURIF')">ACQUISTA TOKEN</button></div>
-    <div class="product-card"><img src="rebalan.jpeg"><h3>Rebalancing</h3><button class="buy-btn" onclick="buy('REBAL')">ACQUISTA TOKEN</button></div>
-    <div class="product-card"><img src="sali.jpeg"><h3>Sali Scrub</h3><button class="buy-btn" onclick="buy('SALI')">ACQUISTA TOKEN</button></div>
-    <div class="product-card"><img src="hair.jpeg"><h3>Elite Hair</h3><button class="buy-btn" onclick="buy('HAIR')">ACQUISTA TOKEN</button></div>
-    <div class="product-card"><img src="3d.jpeg"><h3>Treatment 3D</h3><button class="buy-btn" onclick="buy('T3D')">ACQUISTA TOKEN</button></div>
-    <div class="product-card"><img src="oi.jpeg"><h3>Linea OI</h3><button class="buy-btn" onclick="buy('OI')">ACQUISTA TOKEN</button></div>
-    <div class="product-card"><img src="donne.jpeg"><h3>Luxury Style</h3><button class="buy-btn" onclick="buy('STYLE')">ACQUISTA TOKEN</button></div>
-    <div class="product-card"><img src="glass.jpeg"><h3>Glass Effect</h3><button class="buy-btn" onclick="buy('GLASS')">ACQUISTA TOKEN</button></div>
-    <div class="product-card"><img src="casa.jpeg"><h3>Home Care Kit</h3><button class="buy-btn" onclick="buy('HOME')">ACQUISTA TOKEN</button></div>
-    <div class="product-card"><img src="circle.jpeg"><h3>The Circle</h3><button class="buy-btn" onclick="buy('C1')">ACQUISTA TOKEN</button></div>
-    <div class="product-card"><img src="circle2.jpeg"><h3>Night Circle</h3><button class="buy-btn" onclick="buy('C2')">ACQUISTA TOKEN</button></div>
+    <div class="item"><img src="oil.jpeg"><h3>Essence Oil</h3><div class="price">1.00 SHAMPOO</div><button class="btn-luxury" onclick="buy('SHAMPOO')">Acquista Asset</button></div>
+    <div class="item"><img src="purif.jpeg"><h3>Pure Gel</h3><div class="price">1.00 PURIF</div><button class="btn-luxury" onclick="buy('PURIF')">Acquista Asset</button></div>
+    <div class="item"><img src="rebalan.jpeg"><h3>Balance Mask</h3><div class="price">1.00 REBAL</div><button class="btn-luxury" onclick="buy('REBAL')">Acquista Asset</button></div>
+    <div class="item"><img src="sali.jpeg"><h3>Sea Scrub</h3><div class="price">1.00 SALI</div><button class="btn-luxury" onclick="buy('SALI')">Acquista Asset</button></div>
+    <div class="item"><img src="hair.jpeg"><h3>Elite Style</h3><div class="price">1.00 HAIR</div><button class="btn-luxury" onclick="buy('HAIR')">Acquista Asset</button></div>
+    <div class="item"><img src="3d.jpeg"><h3>Volume 3D</h3><div class="price">1.00 TREAT3D</div><button class="btn-luxury" onclick="buy('TREAT3D')">Acquista Asset</button></div>
+    <div class="item"><img src="oi.jpeg"><h3>Absolute OI</h3><div class="price">1.00 OI</div><button class="btn-luxury" onclick="buy('OI')">Acquista Asset</button></div>
+    <div class="item"><img src="donne.jpeg"><h3>Atelier Cut</h3><div class="price">1.00 STYLE</div><button class="btn-luxury" onclick="buy('STYLE')">Acquista Asset</button></div>
+    <div class="item"><img src="glass.jpeg"><h3>Glass Shine</h3><div class="price">1.00 GLASS</div><button class="btn-luxury" onclick="buy('GLASS')">Acquista Asset</button></div>
+    <div class="item"><img src="casa.jpeg"><h3>Home Ritual</h3><div class="price">1.00 HOME</div><button class="btn-luxury" onclick="buy('HOME')">Acquista Asset</button></div>
+    <div class="item"><img src="circle.jpeg"><h3>The Circle</h3><div class="price">1.00 C1</div><button class="btn-luxury" onclick="buy('C1')">Acquista Asset</button></div>
+    <div class="item"><img src="circle2.jpeg"><h3>Night Care</h3><div class="price">1.00 C2</div><button class="btn-luxury" onclick="buy('C2')">Acquista Asset</button></div>
+    <div class="item"><img src="capelli.jpeg"><h3>Creative Direction</h3><div class="price">1.00 MASTER</div><button class="btn-luxury" onclick="buy('MASTER')">Acquista Asset</button></div>
 </div>
 
 <footer>
-    <p>Issuer ID: GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK</p>
-    <p>&copy; 2026 CURATORI1 BLOCKCHAIN SALON</p>
+    Issuer: GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK
+    <br><br>&copy; 2026 Curatori1 Fine Art Salon
 </footer>
 
 <script src="app.js"></script>
 </body>
 </html>
+     
+ 
