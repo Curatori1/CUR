@@ -3,67 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CURATORI1 | Atelier Blockchain</title>
+    <title>CURATORI1 | Hair & Blockchain Atelier</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #d4af37; --light-grey: #f9f9f9; }
-        body { background-color: #ffffff; color: #333; font-family: 'Montserrat', sans-serif; margin: 0; }
+        :root { --gold: #d4af37; --white: #ffffff; --light: #f4f4f4; }
+        body { background-color: var(--white); color: #1a1a1a; font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; }
         
+        /* Header minimale e lussuoso */
         header { 
-            padding: 80px 20px; text-align: center; background: var(--light-grey);
-            border-bottom: 1px solid #eee;
+            padding: 100px 20px; text-align: center; background: var(--white);
+            border-bottom: 1px solid #f0f0f0;
         }
-        h1 { font-family: 'Cinzel', serif; font-size: 2.5rem; letter-spacing: 10px; color: #000; margin: 0; }
-        .subtitle { font-weight: 200; letter-spacing: 5px; text-transform: uppercase; font-size: 0.8rem; margin-top: 10px; }
+        h1 { font-family: 'Cinzel', serif; font-size: 3rem; letter-spacing: 12px; color: #000; margin: 0; }
+        .tagline { font-weight: 200; letter-spacing: 6px; text-transform: uppercase; font-size: 0.75rem; color: var(--gold); margin-top: 15px; }
 
-        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; padding: 60px 8%; }
-        
-        .item { text-align: center; transition: 0.3s; }
-        .item:hover { opacity: 0.8; }
-        .item img { width: 100%; height: 400px; object-fit: cover; border: 1px solid #eee; }
-        
-        .item h3 { font-family: 'Cinzel', serif; font-size: 1.1rem; letter-spacing: 2px; margin: 20px 0 10px; }
-        .price { font-weight: 200; color: var(--gold); margin-bottom: 20px; }
-
-        .btn-luxury { 
-            background: none; border: 1px solid #333; color: #333; padding: 12px 30px; 
-            text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; cursor: pointer; transition: 0.4s;
+        /* Griglia Prodotti */
+        .container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 60px; padding: 80px 10%; 
         }
-        .btn-luxury:hover { background: #000; color: #fff; border-color: #000; }
+        
+        .product { text-align: center; transition: transform 0.4s ease; }
+        .product:hover { transform: translateY(-5px); }
+        
+        .product img { 
+            width: 100%; height: 450px; object-fit: cover; 
+            border: 1px solid #f0f0f0; filter: contrast(105%);
+        }
+        
+        .product h3 { font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 3px; margin: 25px 0 10px; color: #000; }
+        .price { font-weight: 300; color: #888; font-size: 0.9rem; margin-bottom: 25px; letter-spacing: 1px; }
 
-        footer { padding: 50px; text-align: center; font-size: 0.7rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
+        /* Bottone Custom */
+        .buy-btn { 
+            background: none; border: 1px solid #1a1a1a; color: #1a1a1a; padding: 15px 40px; 
+            text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; cursor: pointer; 
+            transition: all 0.3s ease;
+        }
+        .buy-btn:hover { background: #1a1a1a; color: #fff; }
+
+        footer { padding: 80px 20px; text-align: center; border-top: 1px solid #f0f0f0; font-size: 0.65rem; letter-spacing: 2px; color: #bbb; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>CURATORI1</h1>
-    <div class="subtitle">Atelier Stellar Blockchain</div>
+    <div class="tagline">Exclusive Stellar Blockchain Salon</div>
 </header>
 
 <div class="container">
-    <div class="item"><img src="oil.jpeg"><h3>Essence Oil</h3><div class="price">1.00 SHAMPOO</div><button class="btn-luxury" onclick="buy('SHAMPOO')">Acquista Asset</button></div>
-    <div class="item"><img src="purif.jpeg"><h3>Pure Gel</h3><div class="price">1.00 PURIF</div><button class="btn-luxury" onclick="buy('PURIF')">Acquista Asset</button></div>
-    <div class="item"><img src="rebalan.jpeg"><h3>Balance Mask</h3><div class="price">1.00 REBAL</div><button class="btn-luxury" onclick="buy('REBAL')">Acquista Asset</button></div>
-    <div class="item"><img src="sali.jpeg"><h3>Sea Scrub</h3><div class="price">1.00 SALI</div><button class="btn-luxury" onclick="buy('SALI')">Acquista Asset</button></div>
-    <div class="item"><img src="hair.jpeg"><h3>Elite Style</h3><div class="price">1.00 HAIR</div><button class="btn-luxury" onclick="buy('HAIR')">Acquista Asset</button></div>
-    <div class="item"><img src="3d.jpeg"><h3>Volume 3D</h3><div class="price">1.00 TREAT3D</div><button class="btn-luxury" onclick="buy('TREAT3D')">Acquista Asset</button></div>
-    <div class="item"><img src="oi.jpeg"><h3>Absolute OI</h3><div class="price">1.00 OI</div><button class="btn-luxury" onclick="buy('OI')">Acquista Asset</button></div>
-    <div class="item"><img src="donne.jpeg"><h3>Atelier Cut</h3><div class="price">1.00 STYLE</div><button class="btn-luxury" onclick="buy('STYLE')">Acquista Asset</button></div>
-    <div class="item"><img src="glass.jpeg"><h3>Glass Shine</h3><div class="price">1.00 GLASS</div><button class="btn-luxury" onclick="buy('GLASS')">Acquista Asset</button></div>
-    <div class="item"><img src="casa.jpeg"><h3>Home Ritual</h3><div class="price">1.00 HOME</div><button class="btn-luxury" onclick="buy('HOME')">Acquista Asset</button></div>
-    <div class="item"><img src="circle.jpeg"><h3>The Circle</h3><div class="price">1.00 C1</div><button class="btn-luxury" onclick="buy('C1')">Acquista Asset</button></div>
-    <div class="item"><img src="circle2.jpeg"><h3>Night Care</h3><div class="price">1.00 C2</div><button class="btn-luxury" onclick="buy('C2')">Acquista Asset</button></div>
-    <div class="item"><img src="capelli.jpeg"><h3>Creative Direction</h3><div class="price">1.00 MASTER</div><button class="btn-luxury" onclick="buy('MASTER')">Acquista Asset</button></div>
+    <div class="product"><img src="oil.jpeg"><h3>Essence Oil</h3><div class="price">1.00 SHAMPOO</div><button class="buy-btn" onclick="buy('SHAMPOO')">Acquista</button></div>
+    <div class="product"><img src="purif.jpeg"><h3>Purifying Treatment</h3><div class="price">1.00 PURIF</div><button class="buy-btn" onclick="buy('PURIF')">Acquista</button></div>
+    <div class="product"><img src="rebalan.jpeg"><h3>Balance Mask</h3><div class="price">1.00 REBAL</div><button class="buy-btn" onclick="buy('REBAL')">Acquista</button></div>
+    <div class="product"><img src="sali.jpeg"><h3>Sea Scrub Ritual</h3><div class="price">1.00 SALI</div><button class="buy-btn" onclick="buy('SALI')">Acquista</button></div>
+    <div class="product"><img src="hair.jpeg"><h3>Elite Hair Service</h3><div class="price">1.00 HAIR</div><button class="buy-btn" onclick="buy('HAIR')">Acquista</button></div>
+    <div class="product"><img src="3d.jpeg"><h3>3D Dimension</h3><div class="price">1.00 TREAT3D</div><button class="buy-btn" onclick="buy('TREAT3D')">Acquista</button></div>
+    <div class="product"><img src="oi.jpeg"><h3>Absolute OI</h3><div class="price">1.00 OI</div><button class="buy-btn" onclick="buy('OI')">Acquista</button></div>
+    <div class="product"><img src="donne.jpeg"><h3>Atelier Styling</h3><div class="price">1.00 STYLE</div><button class="buy-btn" onclick="buy('STYLE')">Acquista</button></div>
+    <div class="product"><img src="glass.jpeg"><h3>Glass Shine</h3><div class="price">1.00 GLASS</div><button class="buy-btn" onclick="buy('GLASS')">Acquista</button></div>
+    <div class="product"><img src="casa.jpeg"><h3>Home Care Ritual</h3><div class="price">1.00 HOME</div><button class="buy-btn" onclick="buy('HOME')">Acquista</button></div>
+    <div class="product"><img src="circle.jpeg"><h3>The Circle Experience</h3><div class="price">1.00 C1</div><button class="buy-btn" onclick="buy('C1')">Acquista</button></div>
+    <div class="product"><img src="circle2.jpeg"><h3>Night Care Concept</h3><div class="price">1.00 C2</div><button class="buy-btn" onclick="buy('C2')">Acquista</button></div>
 </div>
 
 <footer>
     Issuer: GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK
-    <br><br>&copy; 2026 Curatori1 Fine Art Salon
+    <br><br>&copy; 2026 CURATORI1 ATELIER
 </footer>
 
 <script src="app.js"></script>
 </body>
 </html>
-     
- 
